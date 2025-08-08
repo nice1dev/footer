@@ -1,0 +1,258 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content {
+            flex: 1;
+            padding: 40px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            color: #333;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 50px 20px 30px;
+        }
+
+        .footer-columns {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column ul li a {
+            color: #666;
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .footer-column ul li a:hover {
+            color: #f49f80;
+            text-decoration: underline;
+        }
+
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 12px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .payment-logo {
+            width: 70px;
+            height: 45px;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: #495057;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+        }
+
+        .payment-logo:hover {
+            border-color: #d1d5db;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.06);
+        }
+
+        .payment-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .visa { background: linear-gradient(135deg, #1a1f71 0%, #0f4c75 100%); color: white; }
+        .mastercard { background: linear-gradient(135deg, #eb001b 0%, #f79e1b 100%); color: white; }
+        .scb { background: linear-gradient(135deg, #4e2a84 0%, #9013fe 100%); color: white; }
+        .kbank { background: linear-gradient(135deg, #138808 0%, #7cb342 100%); color: white; }
+        .ktb { background: linear-gradient(135deg, #1976d2 0%, #42a5f5 100%); color: white; }
+        .paypal { background: linear-gradient(135deg, #003087 0%, #009cde 100%); color: white; }
+
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .social-links a {
+            color: #666;
+            text-decoration: none;
+            font-weight: 400;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+            padding: 8px 12px;
+            border-radius: 6px;
+            background: rgba(102, 126, 234, 0.05);
+        }
+
+        .social-links a:hover {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            transform: translateX(5px);
+        }
+
+        .footer-separator {
+            height: 1px;
+            background-color: #ccc;
+            margin: 30px 0 25px;
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-bottom-left {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        .footer-bottom-left p {
+            color: #666;
+            font-size: 0.9rem;
+            font-weight: 300;
+        }
+
+        .footer-bottom-left .copyright {
+            font-weight: 500;
+        }
+
+        .footer-logo {
+            height: 30px;
+            max-width: 120px;
+        }
+
+        .footer-logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
+            @media (max-width: 768px) {
+            .footer-columns {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+
+            .payment-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+            }
+
+            .payment-logo {
+                width: 60px;
+                height: 40px;
+                font-size: 0.75rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .social-links {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .social-links a {
+                padding: 6px 10px;
+                font-size: 0.85rem;
+            }
+        }
+
+            @media (max-width: 480px) {
+            .footer-columns {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .footer-content {
+                padding: 40px 15px 25px;
+            }
+
+            .payment-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .payment-logo {
+                width: 55px;
+                height: 38px;
+                font-size: 0.7rem;
+                padding: 6px;
+            }
+
+            .social-links {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .content h1 {
+                font-size: 2rem;
+            }
+
+            .content p {
+                font-size: 1rem;
+            }
+        }
