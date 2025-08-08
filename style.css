@@ -213,6 +213,7 @@
                 flex-direction: row;
                 flex-wrap: wrap;
                 justify-content: center;
+                margin-right: 8px;
             }
 
             .social-links a {
